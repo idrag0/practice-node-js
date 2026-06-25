@@ -1,0 +1,21 @@
+
+.container{
+    margin : 5px;
+    padding : 10px;
+}
+
+.task-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.description-task{
+    margin : 5px;
+    padding : 10px;
+
+}
+
+.title-task{
+    margin : 5px;
+    padding : 10px;
+}

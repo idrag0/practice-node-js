@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #333;
+
+    
+}
+
+.logo {
+    padding: 10px;
+    color: #fff;
+    font-size: 15px;
+    
+}
+
+.nav-links {
+    padding-left: 20px;
+    display: flex;
+    list-style: none;
+    
+    
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
