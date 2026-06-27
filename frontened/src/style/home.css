@@ -1,0 +1,88 @@
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Task Card */
+.task-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Task Title */
+.task-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+/* Task Description */
+.task-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.bnt-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.update-bnt,
+.delete-bnt {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Update Button */
+.update-bnt {
+    background-color: #22c55e;
+}
+
+.update-bnt:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px);
+}
+
+/* Delete Button */
+.delete-bnt {
+    background-color: #ef4444;
+}
+
+.delete-bnt:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+}
+
+/* Click Effect */
+.update-bnt:active,
+.delete-bnt:active {
+    transform: scale(0.98);
+}
