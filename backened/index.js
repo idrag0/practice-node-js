@@ -1,19 +1,28 @@
 import express from "express";
+import cors from "cors";
 import { collectionName, connection } from "./dbconfig.js";
 
 const app = express();
-
+app.use(cors())
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.send({
-        message: "hello",
-        success: true
-    });
+app.get("/api/task", async (req, res) => {
+    
+        const db = await connection();
+        const collection = db.collection(collectionName);
+
+        const result = await collection.find({}).toArray();
+
+        res.status(200).json({
+            success: true,
+            data: result
+        });
+
+    
 });
 
+
 app.post("/add-task", async (req, res) => {
-    try {
         const db = await connection();
         const collection = db.collection(collectionName);
 
@@ -24,14 +33,9 @@ app.post("/add-task", async (req, res) => {
             message: "Task added successfully",
             data: result
         });
-    } catch (error) {
-        res.status(500).send({
-            success: false,
-            message: error.message
-        });
-    }
+    
 });
 
-app.listen(3200, () => {
-    console.log("Server is running on port 3200");
+app.listen(5000, () => {
+    console.log("Server is running on port 5000");
 });
